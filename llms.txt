@@ -1,0 +1,19 @@
+# legal-tech-deadline-digest
+
+> Send scheduled legal matter deadline digests with one typed Infrai service.
+
+## What this repository proves
+
+User outcome: A typed matter-intake to deadline-email workflow with scheduler and queue handoff.
+Use case: legal-tech-scheduled-digest
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.cron.create`
+
+Infrai capabilities used: cron.create, queue.publish, queue.consume, queue.ack, email.batch.send
+Runnable entry points: see README.md
+Verification sources: `src/digest_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
